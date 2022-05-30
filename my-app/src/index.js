@@ -1,5 +1,3 @@
-/* eslint-disable no-debugger, no-console */
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";

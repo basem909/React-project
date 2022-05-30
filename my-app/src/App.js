@@ -1,5 +1,3 @@
-/* eslint-disable no-debugger, no-console */
-
 import logo from './logo.svg';
 import './App.css';
 
