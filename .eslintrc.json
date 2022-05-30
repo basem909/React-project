@@ -20,9 +20,6 @@
     "import/no-unresolved": "off",
     "no-shadow": "off"
   },
-  "eslint.workingDirectories": [
-        {"mode": "auto"}
- ],
   "ignorePatterns": [
     "dist/",
     "build/",
