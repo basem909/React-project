@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable no-debugger, no-console */
 
 const reportWebVitals = (onPerfEntry) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
