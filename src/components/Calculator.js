@@ -1,8 +1,7 @@
-import React, { Component } from "react";
-import "./Calculator.css";
-import CalButton from "./calButton";
-import calculate from "../logic/calculate";
-import { operation } from "retry";
+import React, { Component } from 'react';
+import './Calculator.css';
+import CalButton from './calButton';
+import calculate from '../logic/calculate';
 
 class Calculator extends Component {
   constructor(props) {
@@ -10,16 +9,22 @@ class Calculator extends Component {
     this.state = { total: 0, next: null, operation: null };
     this.clickHandler = this.clickHandler.bind(this);
   }
+
   clickHandler = (e) => {
     const result = calculate(this.state, e.target.id);
     this.setState(result);
   };
+
   render() {
     const { total, next, operation } = this.state;
     return (
       <section className="clac-container">
         <p>
-          {total} {operation} {next}
+          {total}
+          {' '}
+          {operation}
+          {' '}
+          {next}
         </p>
         <section className="btn-container">
           <CalButton
