@@ -25,7 +25,7 @@ p {
   background-color: lightgray;
 }
 
-button {
+.btn {
   text-align: center;
   padding: 4vw;
   font-size: 3vw;
@@ -38,6 +38,6 @@ button {
   background-color: #fe9600;
 }
 
-#extend {
+.extend {
   grid-column: auto / span 2;
 }
