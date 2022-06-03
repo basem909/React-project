@@ -1,151 +1,148 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './Calculator.css';
 import CalButton from './calButton';
 import calculate from '../logic/calculate';
 
-class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { total: 0, next: null, operation: null };
-    this.clickHandler = this.clickHandler.bind(this);
-  }
+const Calculator = () => {
+ 
+    const [state,setState] = useState({ total: 0, next: null, operation: null });
+    
 
-  clickHandler = (e) => {
-    const result = calculate(this.state, e.target.id);
-    this.setState(result);
+  const clickHandler = (e) => {
+    const result = calculate(state, e.target.id);
+    setState(result);
   };
 
-  render() {
-    const { total, next, operation } = this.state;
+  
     return (
       <section className="clac-container">
         <p>
-          {total}
+          {state.total}
           {' '}
-          {operation}
+          {state.operation}
           {' '}
-          {next}
+          {state.next}
         </p>
         <section className="btn-container">
           <CalButton
             id="AC"
             type="button"
             className="btn"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
 
           <CalButton
             id="+/-"
             type="button"
             className="btn"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="%"
             type="button"
             className="btn"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="÷"
             type="button"
             className="btn orange"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="7"
             type="button"
             className="btn"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="8"
             type="button"
             className="btn"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="9"
             type="button"
             className="btn"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="x"
             type="button"
             className="btn orange"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="4"
             type="button"
             className="btn"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="5"
             type="button"
             className="btn"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="6"
             type="button"
             className="btn"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="-"
             type="button"
             className="btn orange"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="1"
             type="button"
             className="btn"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="2"
             type="button"
             className="btn"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="3"
             type="button"
             className="btn"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="+"
             type="button"
             className="btn orange"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="0"
             type="button"
             className="btn extend"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="."
             type="button"
             className="btn"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
           <CalButton
             id="="
             type="button"
             className="btn orange"
-            onClick={this.clickHandler}
+            onClick={clickHandler}
           />
         </section>
       </section>
     );
-  }
+  
 }
 
 export default Calculator;
