@@ -4,21 +4,21 @@ import CalButton from './calButton';
 import calculate from '../logic/calculate';
 
 const Calculator = () => {
-  const [state, setState] = useState({ total: 0, next: null, operation: null });
+  const [number, setNumber] = useState({ total: 0, next: null, operation: null });
 
   const clickHandler = (e) => {
-    const result = calculate(state, e.target.id);
-    setState(result);
+    const result = calculate(number, e.target.id);
+    setNumber(result);
   };
 
   return (
     <section className="clac-container">
       <p>
-        {state.total}
+        {number.total}
         {' '}
-        {state.operation}
+        {number.operation}
         {' '}
-        {state.next}
+        {number.next}
       </p>
       <section className="btn-container">
         <CalButton
