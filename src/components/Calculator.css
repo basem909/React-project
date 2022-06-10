@@ -1,6 +1,16 @@
+.cal-cont {
+  display: flex;
+}
+
+h2 {
+  margin-top: 5vw;
+  margin-left: 3vw;
+}
+
 .clac-container {
-  margin: 10vw;
-  width: 80vw;
+  margin-left: 8vw;
+  margin-top: 5vw;
+  width: 60vw;
   display: flex;
   flex-direction: column;
 }
